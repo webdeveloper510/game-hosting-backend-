@@ -95,17 +95,18 @@ a.text-warning {
                     <div class="col-md-5">
                         <div class="card my-5">
                             <div class="container">
-                                <form class="Sign_login my-5 p-4">
+                                <form class="Sign_login my-5 p-4" action="{{URL('/user_login')}}" method="post">
+                                    @csrf
                                     <div class="form_login">
                                         <div class="login_button pb-4"><button type="submit" class="btn btn-warning">Login Form</button></div>
                                     </div>
                                         <div class="mb-3">
                                         <label for="email" class="form-label text-light">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="enter email">
+                                        <input type="email" class="form-control" id="email" placeholder="enter email" name="email">
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label text-light">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="enter password">
+                                        <input type="password" class="form-control" id="password" placeholder="enter password" name="password">
                                     </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class=" form-check-input" id="exampleCheck1">

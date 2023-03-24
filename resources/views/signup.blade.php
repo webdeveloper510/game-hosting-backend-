@@ -91,7 +91,6 @@ a.text-warning {
 </head>
 
 <body>
-
     <section class="login_form">
         <div class="container">
                 <div class="row">
@@ -99,29 +98,30 @@ a.text-warning {
                     <div class="col-md-5">
                         <div class="card my-5">
                             <div class="container">
-                                <form  class="row Sign_up my-5 p-4">
+                                <form class="row Sign_up my-5 p-4" action="{{URL('/register_user')}}" method="post">
+                                    @csrf
                                     <div class="sign_form">
                                         <div class="form_sign pb-4"><button type="submit" class="btn btn-warning">Sign up Form</button></div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="firstname" class="form-label text-light">First Name</label>
-                                        <input type="text" class="form-control" id="firstname" placeholder="Enter first name">
+                                        <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="first_name">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="lastname" class="form-label text-light">Last Name</label>
-                                        <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
+                                        <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="last_name">
                                     </div>
                                     <div class=" mb-3">
                                         <label for="email" class="form-label text-light">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label text-light">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                                        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
                                     </div>
                                     <div class="mb-3">
                                         <label for="phone" class="form-label text-light">Phone</label>
-                                        <input type="password" class="form-control" id="phone"  placeholder="Enter phone">
+                                        <input type="tel" class="form-control" id="phone"  placeholder="Enter phone" name="phone">
                                     </div>
                                     <div class="mb-3 form-check remember">
                                         <input type="checkbox" class=" form-check-input" id="exampleCheck1">

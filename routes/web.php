@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GamehostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,7 @@ Route::view('home','index');
 Route::get('signup',[GamehostController::class,'signup']);
 Route::post('register_user',[GamehostController::class,'register_user']);
 Route::get('login',[GamehostController::class,'login']);
+Route::post('user_login',[GamehostController::class,'user_login']);
 Route::get('game_server',[GamehostController::class,'get_server']);
 Route::get('partners',[GamehostController::class,'get_partners']);
 Route::get('supports',[GamehostController::class,'get_support']);
