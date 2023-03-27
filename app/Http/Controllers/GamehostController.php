@@ -5,9 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
+
 class GamehostController extends Controller
 {
 
+    public function webhosting()
+    {
+        return view('webhosting');
+    }
+
+    public function game_info()
+    {
+        return view('game_info');
+    }
+    public function voice()
+    {
+        return view('voice');
+    }
     public function get_server()
     {
         return view('game_server');
@@ -40,7 +54,6 @@ class GamehostController extends Controller
     }
     public function register_user(Request $request)
     {
-
         $data = $request->all();
         $validator = Validator::make($data, [
             'first_name' => 'required',
@@ -67,8 +80,17 @@ class GamehostController extends Controller
 
     public function user_login(Request $request)
     {
-        $login = User::where(['email' => $request['email'], 'password' => $request['password']])->get()->toArray();
+        $data = $request->all();
+        $validator = Validator::make($data, [
+            'email' => 'required',
+            'password' => 'required',
+        ]);
 
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()]);
+        } else {
+            $login = User::where(['email' => $request['email'], 'password' => $request['password']])->get()->toArray();
+        }
         if (count($login) > 0) {
             return response()->json([
                 'message' => 'Login Successfully !!',

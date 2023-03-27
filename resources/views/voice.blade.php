@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo URL::to('/'); ?>/public/css/style.css" rel="stylesheet" type="text/css"/>
 <style>
    section.team_server{
     background-image: url(./assets/images/The-ultimate-buyers-guide-to-headphones-in-2023-blog-featured.jpeg);
@@ -118,7 +118,7 @@ section.customer_say {
 }
 
 .customer_think {
-    font-size: 20px;    
+    font-size: 20px;
 }
 
 .profile {
@@ -243,46 +243,36 @@ p {
     <section class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid"><img src="./assets/images/logo_2.png" height="54px"><button class="navbar-toggler"
+                <div class="container-fluid"><img src="<?php echo URL::to('/'); ?>/public/assets/images/logo_2.png" height="54px"><button class="navbar-toggler"
                         type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-5 mb-lg-0 ms-auto -4">
-                            <li class="nav-item  me-4"><a class="nav-link active " aria-current="page"
-                                    href="#">Home</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="services.html">Game-Server</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="#">Partners</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="#">Supports</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="#">About Us</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="#">Control-Panels</a>
+                            <li class="nav-item  me-4"><a class="nav-link active " aria-current="page" href="<?php echo URL::to('/');?>/home">Home</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/game_server">Game-Server</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/webhosting">Web-hosting</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/voice">Vocie Services</a></li>
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/partners">Partners</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/supports">Supports</a></li> --}}
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/dedicated">Dedicated Servers</a></li>
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/about_us">About Us</a></li> --}}
+                            <li class="nav-item me-4"><a class="nav-link" href="#">Control-Panels</a>
                             </li>
-                            <li class="nav-item me-4"><a class="nav-link  " href=""><span
+                            <li class="nav-item me-4"><a class="nav-link" href=""><span
                                         class="material-symbols-outlined"><span
                                             class="material-symbols-outlined  position-relative">add_shopping_cart <span
                                                 class="position-absolute top-0 start-100 translate-middle p-2 bg-warning  border border-light rounded-circle"><span
                                                     class="visually-hidden">New alerts</span></span></span></a></li>
-                            <li class="nav-item me-4">
-                                <div id="myOverlay" class="overlay">
-                                    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-                                    <div class="overlay-content">
-                                      <form action="/action_page.php">
-                                        <input type="text" placeholder="Search.." name="search">
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                      </form>
-                                    </div>
-                                  </div>
-                                <a class="nav-link search" onclick="openSearch()">
-                                <span class="material-symbols-outlined" >search</span>
-                               </a>
-                            </li>
+                            <li class="nav-item me-5"><a class="nav-link search "><span
+                                        class="material-symbols-outlined">search</span></a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
     </section>
-    
+
 <section class="team_server">
     <div class="container">
         <div class="row">
@@ -306,30 +296,30 @@ p {
        <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-3">
-            
+
             <div class="card mt-4">
-                <img src="./assets/images/Pin-by-Wallpapers-PhoneandPad-HD-on-916-Phone-in-2019- (1) (1) (1).jpg" class="card-img-top" alt="">
+                <img src="<?php echo URL::to('/'); ?>/public/assets/images/Pin-by-Wallpapers-PhoneandPad-HD-on-916-Phone-in-2019- (1) (1) (1).jpg" class="card-img-top" alt="">
                 <div class="card-body">
                     <div class="service_tag">
                         <a href="#" class="order_voice bg-warning">Voice</a>
                     </div>
                     <a href="#" class="voice_page text-light"><h4 class="card_title mt-3">Starbound</h4></a>
                     <div class="d-flex justify-content-between">
-                        <h4 class="voice_price text-light">$29.00</h4>                     
+                        <h4 class="voice_price text-light">$29.00</h4>
                     </div>
-                </div>    
+                </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card mt-4">
-                <img src="./assets/images/Pin-by-Wallpapers-PhoneandPad-HD-on-916-Phone-in-2019- (1) (1) (1).jpg" class="card-img-top" alt="">
+                <img src="<?php echo URL::to('/'); ?>/public/assets/images/Pin-by-Wallpapers-PhoneandPad-HD-on-916-Phone-in-2019- (1) (1) (1).jpg" class="card-img-top" alt="">
                 <div class="card-body">
                     <div class="service_tag">
                         <a href="#" class=" order_voice bg-warning">Voice</a>
                     </div>
                     <a href="#" class="voice_page text-light"><h4 class="card_title mt-3">Project Zomboid</h4></a>
                     <div class="d-flex justify-content-between">
-                        <h4 class="voice_page text-light">$29.00</h4>   
+                        <h4 class="voice_page text-light">$29.00</h4>
                     </div>
                 </div>
             </div>
@@ -338,7 +328,7 @@ p {
       </div>
     </div>
 </section>
-    
+
 <section class="text_voice">
     <div class="container">
         <div class="row">
@@ -360,7 +350,7 @@ p {
             </div>
             <div class="col-md-6">
                 <div class="text_img my-5">
-                    <img src="./assets/images/apa-itu-hosting.jpg" class="sub_img" alt="">
+                    <img src="<?php echo URL::to('/'); ?>/public/assets/images/apa-itu-hosting.jpg" class="sub_img" alt="">
                 </div>
             </div>
         </div>
@@ -402,7 +392,7 @@ p {
                                             fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
                                             doloremque.
                                             </p>
-                                        </div>   
+                                        </div>
                                     </div>
                                 </div>
 
@@ -459,7 +449,7 @@ p {
                                         fugit consequatur laudantium velit magnam error. Consectetur distinctio fugit
                                         doloremque.
                                         </p>
-                                    </div>   
+                                    </div>
                                 </div>
                                 </div>
                                 <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
@@ -480,7 +470,7 @@ p {
                           <span class="visually-hidden">Next</span>
                         </button>
                       </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -488,16 +478,16 @@ p {
 </section>
     <section class="footer">
         <div class="footer-left">
-            <img src="./assets/images/footer_fire.png"/>
+            <img src="<?php echo URL::to('/'); ?>/public/assets/images/footer_fire.png"/>
         </div>
         <div class="footer-right">
-            <img src="./assets/images/footer_fire.png"/>
+            <img src="<?php echo URL::to('/'); ?>/public/assets/images/footer_fire.png"/>
         </div>
         <div class="container">
             <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="games mx-5">
-                        <img src="./assets/images/logo_2.png" width="140px">
+                        <img src="<?php echo URL::to('/'); ?>/public/assets/images/logo_2.png" width="140px">
                         <p>games marketplace the relase etras thats sheets continig passag.</p>
                     </div>
                 </div>
@@ -548,7 +538,7 @@ p {
         function openSearch() {
           document.getElementById("myOverlay").style.display = "block";
         }
-        
+
         function closeSearch() {
           document.getElementById("myOverlay").style.display = "none";
         }

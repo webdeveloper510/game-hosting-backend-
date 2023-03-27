@@ -51,7 +51,7 @@
                                  <div class="product-tag">
                                     <a href="#">Game </a>
                                  </div>
-                                <a href="game_info.html" class="game_page"><h4 class="card-title mt-3">7 Days to Die</h4></a>
+                                <a href="<?php echo URL::to('/'); ?>/game_info" class="game_page"><h4 class="card-title mt-3">7 Days to Die</h4></a>
                                <div class="d-flex justify-content-between">
                                  <h4>$29.00</h4>
 

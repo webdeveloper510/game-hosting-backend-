@@ -38,17 +38,19 @@
                         <ul class="navbar-nav me-auto mb-5 mb-lg-0 ms-auto -4">
                             <li class="nav-item  me-4"><a class="nav-link active " aria-current="page" href="<?php echo URL::to('/');?>/home">Home</a></li>
                             <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/game_server">Game-Server</a></li>
-                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/partners">Partners</a></li>
-                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/supports">Supports</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/webhosting">Web-hosting</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/voice">Vocie Services</a></li>
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/partners">Partners</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/supports">Supports</a></li> --}}
                             <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/dedicated">Dedicated Servers</a></li>
-                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/about_us">About Us</a></li>
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/about_us">About Us</a></li> --}}
                             <li class="nav-item me-4"><a class="nav-link" href="#">Control-Panels</a>
                             </li>
-                            <li class="nav-item me-4"><a class="nav-link" href=""><span
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href=""><span
                                         class="material-symbols-outlined"><span
                                             class="material-symbols-outlined  position-relative">add_shopping_cart <span
                                                 class="position-absolute top-0 start-100 translate-middle p-2 bg-warning  border border-light rounded-circle"><span
-                                                    class="visually-hidden">New alerts</span></span></span></a></li>
+                                                    class="visually-hidden">New alerts</span></span></span></a></li> --}}
                             <li class="nav-item me-5"><a class="nav-link search "><span
                                         class="material-symbols-outlined">search</span></a></li>
                         </ul>

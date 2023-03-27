@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo URL::to('/'); ?>/public/css/style.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -32,25 +32,27 @@
     <section class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid"><img src="./assets/images/logo_2.png" height="54px"><button class="navbar-toggler"
+                <div class="container-fluid"><img src="<?php echo URL::to('/'); ?>/public/assets/images/logo_2.png" height="54px"><button class="navbar-toggler"
                         type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-5 mb-lg-0 ms-auto -4">
-                            <li class="nav-item  me-4"><a class="nav-link  " aria-current="page" href="index.html">Home</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  active" href="services.html">Game-Server</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="partner.html">Partners</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="support.html">Supports</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="dedicated.html">Dedicated Servers</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="aboutus.html">About Us</a></li>
-                            <li class="nav-item me-4"><a class="nav-link  " href="#">Control-Panels</a>
+                            <li class="nav-item  me-4"><a class="nav-link active " aria-current="page" href="<?php echo URL::to('/');?>/home">Home</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/game_server">Game-Server</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/webhosting">Web-hosting</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/voice">Vocie Services</a></li>
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/partners">Partners</a></li>
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/supports">Supports</a></li> --}}
+                            <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/dedicated">Dedicated Servers</a></li>
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href="<?php echo URL::to('/');?>/about_us">About Us</a></li> --}}
+                            <li class="nav-item me-4"><a class="nav-link" href="#">Control-Panels</a>
                             </li>
-                            <li class="nav-item me-4"><a class="nav-link  " href=""><span
+                            {{-- <li class="nav-item me-4"><a class="nav-link" href=""><span
                                         class="material-symbols-outlined"><span
                                             class="material-symbols-outlined  position-relative">add_shopping_cart <span
                                                 class="position-absolute top-0 start-100 translate-middle p-2 bg-warning  border border-light rounded-circle"><span
-                                                    class="visually-hidden">New alerts</span></span></span></a></li>
+                                                    class="visually-hidden">New alerts</span></span></span></a></li> --}}
                             <li class="nav-item me-5"><a class="nav-link search "><span
                                         class="material-symbols-outlined">search</span></a></li>
                         </ul>
@@ -86,10 +88,10 @@
 
                <div class="row my-4">
                   <div class="col-md-6">
-                    <img src="./assets/images/game1.webp" class="w-100"/>
+                    <img src="<?php echo URL::to('/'); ?>/public/assets/images/game1.webp" class="w-100"/>
                   </div>
                   <div class="col-md-6">
-                    <img src="./assets/images/game1.webp" class="w-100"/>
+                    <img src="<?php echo URL::to('/'); ?>/public/assets/images/game1.webp" class="w-100"/>
                   </div>
                </div>
 
@@ -138,7 +140,7 @@
            <div class="row">
             <div class="col-md-5">
                <div class="satisfactionribbon">
-                  <img src="./assets/images/satisfactionribbon.webp" />
+                  <img src="<?php echo URL::to('/'); ?>/public/assets/images/satisfactionribbon.webp" />
                </div>
             </div>
             <div class="col-md-7">
@@ -153,19 +155,19 @@
            </div>
         </div>
     </section>
-    
+
     <section class="footer">
         <div class="footer-left">
-            <img src="./assets/images/footer_fire.png"/>
+            <img src="<?php echo URL::to('/'); ?>/public/assets/images/footer_fire.png"/>
         </div>
         <div class="footer-right">
-            <img src="./assets/images/footer_fire.png"/>
+            <img src="<?php echo URL::to('/'); ?>/public/assets/images/footer_fire.png"/>
         </div>
         <div class="container">
             <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="games mx-5">
-                        <img src="./assets/images/logo_2.png" width="140px">
+                        <img src="<?php echo URL::to('/'); ?>/public/assets/images/logo_2.png" width="140px">
                         <p>games marketplace the relase etras thats sheets continig passag.</p>
                     </div>
                 </div>

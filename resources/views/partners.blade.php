@@ -3,7 +3,7 @@
         <div class="services-overlay">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7 mt-5 ">
+                    <div class="col-md-7 mt-5">
                         <h1 class="manage">PARTNER
                             <span>PROGRAM </span> </h1>
                         <div>
@@ -110,7 +110,6 @@
             <div class="title-game mt-5">
                <h4>DO YOU HAVE SOMETHING ELSE GOING ON THAT YOU THINK IS INTERESTING? PLEASE <span class="letus"> LET US KNOW. </span></h4>
             </div>
-
         </div>
     </section>
 

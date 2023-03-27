@@ -17,15 +17,16 @@ use App\Http\Controllers\GamehostController;
 Route::get('/', function () {
     return view('index');
 });
-Route::view('home','index');
-Route::get('signup',[GamehostController::class,'signup']);
-Route::post('register_user',[GamehostController::class,'register_user']);
-Route::get('login',[GamehostController::class,'login']);
-Route::post('user_login',[GamehostController::class,'user_login']);
-Route::get('game_server',[GamehostController::class,'get_server']);
-Route::get('partners',[GamehostController::class,'get_partners']);
-Route::get('supports',[GamehostController::class,'get_support']);
-Route::get('dedicated',[GamehostController::class,'get_dedicated']);
-Route::get('about_us',[GamehostController::class,'get_about_us']);
-
-
+Route::view('home', 'index');
+Route::get('signup', [GamehostController::class, 'signup']);
+Route::post('register_user', [GamehostController::class, 'register_user']);
+Route::get('login', [GamehostController::class, 'login']);
+Route::post('user_login', [GamehostController::class, 'user_login']);
+Route::get('game_server', [GamehostController::class, 'get_server']);
+Route::get('partners', [GamehostController::class, 'get_partners']);
+Route::get('supports', [GamehostController::class, 'get_support']);
+Route::get('dedicated', [GamehostController::class, 'get_dedicated']);
+Route::get('about_us', [GamehostController::class, 'get_about_us']);
+Route::get('webhosting', [GamehostController::class, 'webhosting']);
+Route::get('voice', [GamehostController::class, 'voice']);
+Route::get('game_info', [GamehostController::class, 'game_info']);
