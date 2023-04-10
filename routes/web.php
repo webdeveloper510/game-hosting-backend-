@@ -30,3 +30,4 @@ Route::get('about_us', [GamehostController::class, 'get_about_us']);
 Route::get('webhosting', [GamehostController::class, 'webhosting']);
 Route::get('voice', [GamehostController::class, 'voice']);
 Route::get('game_info', [GamehostController::class, 'game_info']);
+Route::put('forgot_password/{id}',[GamehostController::class,'forgot_password']);

@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('register_user',[GamehostController::class,'register_user']);
 Route::post('login',[GamehostController::class,'user_login']);
+Route::put('forgot_password/{id}',[GamehostController::class,'forgot_password']);

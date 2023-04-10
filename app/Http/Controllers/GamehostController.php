@@ -52,10 +52,10 @@ class GamehostController extends Controller
     {
         return view('signup');
     }
-    public function register_user(Request $request)
+    public function register_user()
     {
-        $data = $request->all();
-        $validator = Validator::make($data, [
+        $request = Request()->toArray();
+        $validator = Validator::make($request, [
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required',
@@ -68,11 +68,11 @@ class GamehostController extends Controller
             return response()->json(['error' => $validator->errors()]);
         } else {
             $data = new User;
-            $data['first_name']  = $request->first_name;
-            $data['last_name']  = $request->last_name;
-            $data['email']  = $request->email;
-            $data['password']  = $request->password;
-            $data['phone']  = $request->phone;
+            $data['first_name']  = $request['first_name'];
+            $data['last_name']  = $request['last_name'];
+            $data['email']  = $request['email'];
+            $data['password']  = $request['password'];
+            $data['phone']  = $request['phone'];
             $data->save();
             return redirect('login');
         }
@@ -100,5 +100,13 @@ class GamehostController extends Controller
                 'message' => 'Invalid Login !!'
             ]);
         }
+    }
+    public function forgot_password(Request $request, $id){
+        $password = $request['password'];
+        $password = User::where('id', $id)->update(['password' => $password]);
+
+        return response()->json([
+            'Message' => 'Password Updated Successfully !!'
+        ]);
     }
 }

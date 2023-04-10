@@ -129,14 +129,12 @@
                                         name="phone">
                                 </div>
                                 <div class="mb-3 form-check remember">
-                                    <input type="checkbox" class=" form-check-input" id="exampleCheck1">
+                                    <input type="checkbox" class=" form-check-input" id="checkbox_id">
                                     <label class=" form-check-label text-light " for="exampleCheck1">Remember me</label>
-                                    <label class="form-check-label1 forget text-light" for="exampleCheck1"><a
-                                            href="#" class="text-warning forgot_password">Forget Password
-                                            ?</a></label>
+
                                 </div>
                                 <div class="d-grid gap-2 col-md-12 mb-3 text-center ">
-                                    <button type="submit" class="btn btn1-warning ">Sign Up</button>
+                                    <button type="submit" class="btn btn1-warning" id="btn_id" disabled>Sign Up</button>
                                 </div>
                                 <div class="mb-3 text-center">
                                     <label for="" class="form-label text-light me-3">You have an account ? - <a
@@ -157,6 +155,18 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+        $('#checkbox_id').click(function() {
+            if ($(this).is(':checked')) {
+                $('#btn_id').removeAttr('disabled');
+            } else {
+                $('#btn_id').attr('disabled', 'disabled');
+            }
+        });
+    });
     </script>
 </body>
 

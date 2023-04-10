@@ -82,6 +82,32 @@
         .forgot_password {
             margin-left: 48px;
         }
+
+        .logintext {
+            background: transparent;
+    padding: 20px 35px;
+    border: medium none;
+    border-radius: 5px;
+    color: #1c1121;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 20px 44px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    margin: 0 8px;
+}
+
     </style>
 </head>
 
@@ -96,8 +122,10 @@
                             <form class="Sign_login my-5 p-4" action="{{ URL('/user_login') }}" method="post">
                                 @csrf
                                 <div class="form_login">
-                                    <div class="login_button pb-4"><button type="submit" class="btn btn-warning">Login
-                                            Form</button></div>
+                                    <div class="login_button pb-4">
+                                        <p class="logintext">Login
+                                            Form</p>
+                                        </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label text-light">Email</label>
@@ -110,18 +138,17 @@
                                         placeholder="enter password" name="password">
                                 </div>
                                 <div class="mb-3 form-check">
-                                    <input type="checkbox" class=" form-check-input" id="exampleCheck1">
-                                    <label class=" form-check-label text-light " for="exampleCheck1">Remember me</label>
-                                    <label class="form-check-label1 forget text-light" for="exampleCheck1"><a
-                                            href="#" class="text-warning forgot_password">Forget Password
-                                            ?</a></label>
+                                    <input type="checkbox" class="form-check-input" id="checkbox_id">
+                                    <label class="form-check-label text-light " for="exampleCheck1">Remember me</label>
+
                                 </div>
                                 <div class="d-grid gap-2 col-md-12 mb-3 text-center ">
-                                    <button type="submit" class="btn btn1-warning ">Login</button>
+                                    <button type="submit" id="btn_id" class="btn btn1-warning" disabled >Login</button>
                                 </div>
                                 <div class="mb-3 text-center">
                                     <label for="" class="form-label text-light me-3">Don't have an account ? -
-                                        <a href="<?php echo URL::to('/'); ?>/signup" class="forget1 text-warning">Sign Up</a></label>
+                                        <a href="<?php echo URL::to('/'); ?>/signup" class="forget1 text-warning">Sign
+                                            Up</a></label>
 
                                     <!-- <input type="password" class="form-control" id="password"> -->
                                 </div>
@@ -133,12 +160,25 @@
             </div>
         </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script>
+    $(function() {
+    $('#checkbox_id').click(function() {
+        if ($(this).is(':checked')) {
+            $('#btn_id').removeAttr('disabled');
+        } else {
+            $('#btn_id').attr('disabled', 'disabled');
+        }
+    });
+});
+</script>
 </body>
 
 </html>
